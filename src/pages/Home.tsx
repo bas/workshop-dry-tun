@@ -6,6 +6,7 @@ import { useUser } from "../auth/UserContextProvider";
 import { useNavigate } from "react-router-dom";
 import { useToggleOwnedCat } from "../api/hooks/useToggleOwnedCat";
 import styled from "styled-components";
+import { Box } from "@primer/react";
 
 const Headline = styled.h1`
   padding-left: 16px;
@@ -37,6 +38,19 @@ const Home: FunctionComponent = (): ReactElement => {
   return (
     <>
       <Headline>All Rockets available</Headline>
+      <Box
+        bg="lightblue"
+        borderWidth="1px"
+        borderStyle="solid"
+        borderColor="border.default"
+        borderRadius={2}
+        p={3}
+        px={4}
+        fontSize={3}
+        fontWeight="bold"
+      >
+        Sign-up now and get 10% off your first flight!
+      </Box>
       <OctoCollection
         octoItems={data ?? []}
         onToggleOctocat={handleToggleOctocat}
